@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/5jm1sfs/220px-To-Kill-a-Mockingbird-first-edition-cover.jpg",
+      "review": "A timeless classic that addresses the complexities of race and injustice in America.",
+      "totalPages": 336,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classics", "Social Issues"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 2,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/BZnVfFZ/The-Great-Gatsby-Cover-1925-Retouched.jpg",
+      "review": "An exploration of the American Dream and its illusions, set against the backdrop of the Jazz Age.",
+      "totalPages": 180,
+      "rating": 4.3,
+      "category": "Fiction",
+      "tags": ["Classics", "Romance"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 3,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/xMB2nKm/1984-first-edition-cover.jpg",
+      "review": "A chilling dystopian novel that explores themes of totalitarianism, surveillance, and propaganda.",
+      "totalPages": 328,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/VD6BYk2/800px-The-Catcher-in-the-Rye-1951-first-edition-cover.jpg",
+      "review": "A coming-of-age novel that captures the disillusionment of youth and the search for authenticity.",
+      "totalPages": 224,
+      "rating": 4.2,
+      "category": "Fiction",
+      "tags": ["Coming-of-age", "Psychological"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/C9HVs21/Pride-And-Prejudice-Title-Page.jpg",
+      "review": "A witty and romantic novel that explores themes of class, marriage, and societal expectations.",
+      "totalPages": 432,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Romance", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 6,
+      "bookName": "Brave New World",
+      "author": "Aldous Huxley",
+      "image": "https://i.ibb.co/Qf9jFGN/Brave-New-World-First-Edition.jpg",
+      "review": "A thought-provoking dystopian novel that examines the dangers of technological progress and social control.",
+      "totalPages": 288,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Science Fiction"],
+      "publisher": "Chatto & Windus",
+      "yearOfPublishing": 1932
+    }
+  ]
+  
