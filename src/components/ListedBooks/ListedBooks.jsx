@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredListedReadBooks, getStoredListedWishlistBooks } from "../../utilities/localStorage";
 import DisplayList from "../DisplayList/DisplayList";
+import PagesToRead from "../PagesToRead/PagesToRead";
 
 
 
@@ -85,8 +86,13 @@ const ListedBooks = () => {
             {/* {
                 displayReadBooks.map(book=><DisplayList key={book.bookId} book={book}></DisplayList>)
             } */}
+            <div>
+                {
+                    displayReadBooks.map(book=><PagesToRead key={book.bookId} book={book}></PagesToRead>)
+                }
+            </div>
             
-        </div>
+</div>
     );
     
 };
