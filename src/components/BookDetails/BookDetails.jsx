@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
+import {  saveListedReadBooks, saveListedWishlistBooks } from "../../utilities/localStorage";
 
 
 
@@ -18,6 +19,7 @@ const BookDetails = () => {
     const handleReadButton=()=>{
       if(readBtn){
         const newCount=countR +1;
+        saveListedReadBooks(idInt);
         console.log(newCount);
         setCountR(newCount);
         setWishListBtn(false);
@@ -35,6 +37,7 @@ const BookDetails = () => {
     }
     const handleWishListButton=()=>{
       if(wishListBtn){
+        saveListedWishlistBooks(idInt);
         const newCount=countW +1;
         console.log(newCount);
         setCountW(newCount);
