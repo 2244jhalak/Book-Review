@@ -12,6 +12,7 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesToRead from './components/PagesToRead/PagesToRead';
 import Quetos from './components/Quetos/Quetos';
 import AboutUs from './components/AboutUs/AboutUs';
+import BookDetails from './components/BookDetails/BookDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path:"/about",
         element:<AboutUs></AboutUs>
+      },
+      {
+        path:"/details/:bookId",
+        element:<BookDetails></BookDetails>,
+        loader:()=>fetch('/books.json')
       }
     ]
   },
