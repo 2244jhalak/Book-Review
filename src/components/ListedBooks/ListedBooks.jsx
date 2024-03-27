@@ -64,7 +64,7 @@ const ListedBooks = () => {
         }
     },[books])
     return (
-        <div className="mx-60 my-20">
+        <div className="lg:mx-60 mx-6 my-20">
             <div role="tablist" className="tabs tabs-lifted">
   
   <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked />
@@ -86,7 +86,7 @@ const ListedBooks = () => {
             {/* {
                 displayReadBooks.map(book=><DisplayList key={book.bookId} book={book}></DisplayList>)
             } */}
-            <div>
+            <div className="hidden">
                 {
                     displayReadBooks.map(book=><PagesToRead key={book.bookId} book={book}></PagesToRead>)
                 }

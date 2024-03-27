@@ -16,7 +16,7 @@ const Header = () => {
         <Link onClick={()=>handleActive('/')} className={`mr-10 ${active==='/'?`active border-green-500  border-2  px-4 py-1 rounded-md`:``}`} to='/'><a>Home</a></Link>
         <Link onClick={()=>handleActive('/listed')} className={`mr-10 ${active==='/listed'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/listed'><a>Listed Books</a></Link>
         <Link onClick={()=>handleActive('/pages')} className={`mr-10 ${active==='/pages'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/pages'><a>Pages to Read</a></Link>
-        <Link onClick={()=>handleActive('/quetos')} className={`mr-10 ${active==='/quetos'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/quetos'><a>Quetos</a></Link>
+        <Link onClick={()=>handleActive('/quotes')} className={`mr-10 ${active==='/quotes'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/quotes'><a>Quotes</a></Link>
         <Link onClick={()=>handleActive('/about')} className={`${active==='/about'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/about'><a>About Us</a></Link>
     </div>
     return (
