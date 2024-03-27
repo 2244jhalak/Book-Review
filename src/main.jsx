@@ -5,15 +5,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
+import './index.css';
 import Root from './components/Root/Root';
 import Home from './components/Home/Home';
 import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesToRead from './components/PagesToRead/PagesToRead';
 
-import AboutUs from './components/AboutUs/AboutUs';
+
 import BookDetails from './components/BookDetails/BookDetails';
 import Quotes from './components/Quotes/Quotes';
+import Author from './components/Author/Author';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,8 +39,8 @@ const router = createBrowserRouter([
         element:<Quotes></Quotes>
       },
       {
-        path:"/about",
-        element:<AboutUs></AboutUs>
+        path:"/author",
+        element:<Author></Author>
       },
       {
         path:"/details/:bookId",
