@@ -3,6 +3,9 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredListedReadBooks, getStoredListedWishlistBooks } from "../../utilities/localStorage";
 import DisplayList from "../DisplayList/DisplayList";
 import PagesToRead from "../PagesToRead/PagesToRead";
+import { FaArrowDown } from 'react-icons/fa';
+
+
 
 
 
@@ -80,9 +83,13 @@ const ListedBooks = () => {
 
     return (
         <div className="lg:mx-60 mx-6 my-20">
-            <div className="text-right">
+            <div className="h-fit rounded-lg font-bold text-xl bg-gray-100 text-center py-5 mb-5">
+                <h3>Books</h3>
+            </div>
+            <div className="text-center">
             <details className="dropdown mb-10">
-  <summary className="m-1 btn text-white bg-green-500">Sort By</summary>
+  <summary className="m-1 btn text-white bg-green-500">Sort By <FaArrowDown></FaArrowDown>
+  </summary>
   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li onClick={()=>handleReadBooks('rating')}><a>Rating</a></li>
     <li onClick={()=>handleReadBooks('number')}><a>Number of pages</a></li>
