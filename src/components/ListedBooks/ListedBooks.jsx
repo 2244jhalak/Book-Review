@@ -12,20 +12,33 @@ const ListedBooks = () => {
     const [displayReadBooks,setDisplayReadBooks]=useState([]);
     const [listedWishListBooks,setListedWishListBooks]=useState([]);
     const [displayWishListBooks,setDisplayWishListBooks]=useState([]);
-    // const handleJobs=filter=>{
-    //     if(filter==='rating'){
-    //         const rating=listedReadBooks.filter(book=>book.rating)
-    //         setDisplayReadBooks(rating);  
-    //     }
-    //     else if(filter==='total'){
-    //         const remote=jobApplied.filter(job=>job.remote_or_onsite==='Remote');
-    //         setDisplayJobs(remote);
-    //     }
-    //     else if(filter==='year'){
-    //         const onsite=jobApplied.filter(job=>job.remote_or_onsite==='Onsite');
-    //         setDisplayJobs(onsite);
-    //     }
-    // }
+    
+    const handleReadBooks=(filter)=>{
+        
+      
+            if(filter==='rating'){
+                const rating=listedReadBooks.map(book=>book);
+            const newRating= rating.sort((a, b) => b.rating - a.rating);
+
+            setDisplayReadBooks(newRating);
+
+            }
+            else if(filter==='number'){
+            const pages=listedReadBooks.map(book=>book);
+            const newPages= pages.sort((a, b) => b.totalPages - a.totalPages);
+
+            setDisplayReadBooks(newPages);
+
+        }
+        else if(filter==='year'){
+            const year=listedReadBooks.map(book=>book);
+            const newYear= year.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+
+            setDisplayReadBooks(newYear);
+
+        }
+    }
+    
 
     useEffect(()=>{
         const storedWishListBookIds=getStoredListedWishlistBooks();
@@ -65,6 +78,18 @@ const ListedBooks = () => {
     },[books])
     return (
         <div className="lg:mx-60 mx-6 my-20">
+            <div className="text-right">
+            <details className="dropdown mb-10">
+  <summary className="m-1 btn">Sort By</summary>
+  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <li onClick={()=>handleReadBooks('rating')}><a>Rating</a></li>
+    <li onClick={()=>handleReadBooks('number')}><a>Number of pages</a></li>
+    <li onClick={()=>handleReadBooks('year')}><a>Publisher year</a></li>
+    
+  </ul>
+</details>
+</div>
+
             <div role="tablist" className="tabs tabs-lifted">
   
   <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked />

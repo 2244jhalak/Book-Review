@@ -1,0 +1,63 @@
+[
+    {
+      "id":1,  
+      "name": "Harper Lee",
+      "nationality": "American",
+      "genre": "Fiction",
+      "notableWorks": ["To Kill a Mockingbird", "Go Set a Watchman"],
+      "awards": ["Pulitzer Prize for Fiction", "Presidential Medal of Freedom"],
+      "website": "https://en.wikipedia.org/wiki/Harper_Lee",
+      "image": "https://i.ibb.co/VtSfBry/Photo-portrait-of-Harper-Lee-To-Kill-a-Mockingbird-dust-jacket-1960.jpg"
+    },
+    {
+        "id":2,
+      "name": "F. Scott Fitzgerald",
+      "nationality": "American",
+      "genre": "Fiction",
+      "notableWorks": ["The Great Gatsby", "Tender Is the Night", "This Side of Paradise"],
+      "awards": [],
+      "website": "https://en.wikipedia.org/wiki/F._Scott_Fitzgerald",
+      "image": "https://i.ibb.co/GMrGm49/F-Scott-Fitzgerald-1929-photo-portrait-by-Nickolas-Muray-Cropped.jpg"
+    },
+    { 
+        "id":3,
+      "name": "George Orwell",
+      "nationality": "British",
+      "genre": "Dystopian Fiction, Satire",
+      "notableWorks": ["Nineteen Eighty-Four", "Animal Farm"],
+      "awards": [],
+      "website": "https://en.wikipedia.org/wiki/George_Orwell",
+      "image": "https://i.ibb.co/R3KvpWx/George-Orwell-press-photo.jpg"
+    },
+    {
+        "id":4,
+      "name": "J.D. Salinger",
+      "nationality": "American",
+      "genre": "Fiction",
+      "notableWorks": ["The Catcher in the Rye", "Franny and Zooey", "Nine Stories"],
+      "awards": [],
+      "website": "https://en.wikipedia.org/wiki/J._D._Salinger",
+      "image": "https://i.ibb.co/dDCSFJf/J-D-Salinger-Catcher-in-the-Rye-portrait.jpg"
+    },
+    {
+        "id":5,
+      "name": "Jane Austen",
+      "nationality": "British",
+      "genre": "Romance, Fiction",
+      "notableWorks": ["Pride and Prejudice", "Sense and Sensibility", "Emma"],
+      "awards": [],
+      "website": "https://en.wikipedia.org/wiki/Jane_Austen",
+      "image": "https://i.ibb.co/JdDRNNF/Cassandra-Austen-Jane-Austen-c-1810-hires.jpg"
+    },
+    {
+        "id":6,
+      "name": "Aldous Huxley",
+      "nationality": "British",
+      "genre": "Science Fiction, Dystopian Fiction",
+      "notableWorks": ["Brave New World", "The Doors of Perception", "Island"],
+      "awards": [],
+      "website": "https://en.wikipedia.org/wiki/Aldous_Huxley",
+      "image": "https://i.ibb.co/Z623Vjh/Aldous-Huxley-psychical-researcher.png"
+    }
+  ]
+  

@@ -1,16 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
 const Header = () => {
-    const [active,setActive] = useState('/');
-    const handleActive=(path)=>{
-      if(path){
+    
+    const [active, setActive] = useState(localStorage.getItem('activeRoute') || '/');
+
+    // Update active state and localStorage when a route is clicked
+    const handleActive = (path) => {
         setActive(path);
-      }
+        localStorage.setItem('activeRoute', path); // Save active route in localStorage
+    };
+
+    useEffect(() => {
+        // If active route is not found in localStorage, default to '/'
+        if (!localStorage.getItem('activeRoute')) {
+            localStorage.setItem('activeRoute', '/');
+        }
+    }, []);
       
-      
-    }
     const list=
     <div className="items-center">
         <Link onClick={()=>handleActive('/')} className={`mr-10 ${active==='/'?`active border-green-500  border-2  px-4 py-1 rounded-md`:``}`} to='/'><a>Home</a></Link>
