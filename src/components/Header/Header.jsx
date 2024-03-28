@@ -6,26 +6,27 @@ const Header = () => {
     
     const [active, setActive] = useState(localStorage.getItem('activeRoute') || '/');
 
-    // Update active state and localStorage when a route is clicked
+    
     const handleActive = (path) => {
         setActive(path);
-        localStorage.setItem('activeRoute', path); // Save active route in localStorage
+        localStorage.setItem('activeRoute', path); 
     };
 
     useEffect(() => {
-        // If active route is not found in localStorage, default to '/'
+        
         if (!localStorage.getItem('activeRoute')) {
             localStorage.setItem('activeRoute', '/');
         }
     }, []);
+    
       
     const list=
     <div className="items-center">
-        <Link onClick={()=>handleActive('/')} className={`mr-10 ${active==='/'?`active border-green-500  border-2  px-4 py-1 rounded-md`:``}`} to='/'><a>Home</a></Link>
-        <Link onClick={()=>handleActive('/listed')} className={`mr-10 ${active==='/listed'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/listed'><a>Listed Books</a></Link>
-        <Link onClick={()=>handleActive('/pages')} className={`mr-10 ${active==='/pages'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/pages'><a>Pages to Read</a></Link>
-        <Link onClick={()=>handleActive('/quotes')} className={`mr-10 ${active==='/quotes'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/quotes'><a>Quotes</a></Link>
-        <Link onClick={()=>handleActive('/author')} className={`${active==='/author'?`active border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/author'><a>Author</a></Link>
+        <Link onClick={()=>handleActive('/')} className={`mr-10 ${active==='/'?`active border-green-500 text-green-500  border-2  px-4 py-1 rounded-md`:``}`} to='/'><a>Home</a></Link>
+        <Link onClick={()=>handleActive('/listed')} className={`mr-10 ${active==='/listed'?`active text-green-500 border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/listed'><a>Listed Books</a></Link>
+        <Link onClick={()=>handleActive('/pages')} className={`mr-10 ${active==='/pages'?`active text-green-500 border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/pages'><a>Pages to Read</a></Link>
+        <Link onClick={()=>handleActive('/quotes')} className={`mr-10 ${active==='/quotes'?`active text-green-500 border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/quotes'><a>Quotes</a></Link>
+        <Link onClick={()=>handleActive('/author')} className={`${active==='/author'?`active text-green-500 border-green-500  border-2 px-4 py-1 rounded-md`:``}`} to='/author'><a>Author</a></Link>
     </div>
     return (
         <div>

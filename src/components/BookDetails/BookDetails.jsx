@@ -44,18 +44,10 @@ const BookDetails = () => {
         
         
       }
-      else if(readBtn){
-        if(wishListBtn){
-          toast('Already Added to the readlist so you can not add wishlist')
-
-        }
-        
-      }
-      
-      
       else{
-        toast('Already Added to the wishlist. Double click is not allowed');
-      }
+        
+          toast('Already Added to the readlist so you can not add wishlist / Double click is not allowed')
+        }
       setWishListBtn(false);
       
     }

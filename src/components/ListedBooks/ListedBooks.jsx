@@ -39,25 +39,6 @@ const ListedBooks = () => {
         }
     }
     
-
-    useEffect(()=>{
-        const storedWishListBookIds=getStoredListedWishlistBooks();
-        if(books.length>0){
-            const listedBooks=[];
-            for(const id of storedWishListBookIds){
-                const book=books.find(book=>book.bookId===id);
-                if(book){
-                    listedBooks.push(book);
-                }
-            }
-            setListedWishListBooks(listedBooks);
-            setDisplayWishListBooks(listedBooks);
-           
-              
-           
-           
-        }
-    },[books])
     useEffect(()=>{
         const storedReadBookIds=getStoredListedReadBooks();
         if(books.length>0){
@@ -76,11 +57,31 @@ const ListedBooks = () => {
            
         }
     },[books])
+    useEffect(()=>{
+        const storedReadBookIds=getStoredListedWishlistBooks();
+        if(books.length>0){
+            const listedBooks=[];
+            for(const id of storedReadBookIds){
+                const book=books.find(book=>book.bookId===id);
+                if(book){
+                    listedBooks.push(book);
+                }
+            }
+            setListedWishListBooks(listedBooks);
+            setDisplayWishListBooks(listedBooks);
+           
+              
+           
+           
+        }
+    },[books])
+    
+
     return (
         <div className="lg:mx-60 mx-6 my-20">
             <div className="text-right">
             <details className="dropdown mb-10">
-  <summary className="m-1 btn">Sort By</summary>
+  <summary className="m-1 btn text-white bg-green-500">Sort By</summary>
   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li onClick={()=>handleReadBooks('rating')}><a>Rating</a></li>
     <li onClick={()=>handleReadBooks('number')}><a>Number of pages</a></li>
@@ -88,6 +89,7 @@ const ListedBooks = () => {
     
   </ul>
 </details>
+
 </div>
 
             <div role="tablist" className="tabs tabs-lifted">
