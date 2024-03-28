@@ -53,9 +53,9 @@ const BookDetails = () => {
     }
     
     return (
-        <div className="flex p-20">
+        <div className="flex lg:flex-row flex-col lg:p-20">
             <div className="flex-1 bg-gray-100 p-20 rounded-xl">
-                <img className="h-[500px] w-full rounded-xl" src={book.image} alt="" />
+                <img className="lg:h-[500px] h-[250px] w-full rounded-xl" src={book.image} alt="" />
 
             </div>
             <div className="flex-1 px-12 space-y-5">
