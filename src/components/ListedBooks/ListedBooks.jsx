@@ -39,6 +39,7 @@ const ListedBooks = () => {
         }
     }
     
+    
     useEffect(()=>{
         const storedReadBookIds=getStoredListedReadBooks();
         if(books.length>0){
@@ -91,6 +92,7 @@ const ListedBooks = () => {
 </details>
 
 </div>
+            
 
             <div role="tablist" className="tabs tabs-lifted">
   
