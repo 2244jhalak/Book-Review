@@ -9,8 +9,7 @@ import {  saveListedReadBooks, saveListedWishlistBooks } from "../../utilities/l
 const BookDetails = () => {
     const [readBtn,setReadBtn]=useState(true);
     const [wishListBtn,setWishListBtn]=useState(true);
-    const [countR,setCountR]=useState(0);
-    const [countW,setCountW]=useState(0);
+
     const books=useLoaderData();
     const {bookId}=useParams();
     const idInt=parseInt(bookId);
@@ -18,15 +17,15 @@ const BookDetails = () => {
     
     const handleReadButton=()=>{
       if(readBtn){
-        const newCount=countR +1;
+        
         saveListedReadBooks(idInt);
-        console.log(newCount);
-        setCountR(newCount);
+        
         setWishListBtn(false);
+        toast('Added to the read list')
         
       }
       else{
-        toast('Already Added to read list');
+        toast('Already Added to the read list. Double click is not allowed');
       }
       setReadBtn(false);
       
@@ -38,14 +37,24 @@ const BookDetails = () => {
     const handleWishListButton=()=>{
       if(wishListBtn){
         saveListedWishlistBooks(idInt);
-        const newCount=countW +1;
-        console.log(newCount);
-        setCountW(newCount);
+        
+        
         setReadBtn(true);
+        toast('Added to the wishlist');
+        
         
       }
+      else if(readBtn){
+        if(wishListBtn){
+          toast('Already Added to the readlist so you can not add wishlist')
+
+        }
+        
+      }
+      
+      
       else{
-        toast('You already read this so you can not wish this');
+        toast('Already Added to the wishlist. Double click is not allowed');
       }
       setWishListBtn(false);
       
