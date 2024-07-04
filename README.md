@@ -13,7 +13,7 @@ Welcome to the Book Website! This platform is designed to provide a curated coll
 - Tailwind CSS
 
 ## How to Run Locally
-- Clone the repository: `https://github.com/2244jhalak/Art-Craft-Store.git`
+- Clone the repository: `https://github.com/2244jhalak/Book-Review.git`
 - Install dependencies: `npm install`
 - Start the server: `npm run dev`
 
